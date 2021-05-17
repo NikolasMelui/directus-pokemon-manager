@@ -1,12 +1,23 @@
+import os
 import requests
 
-BASE_URL = "http://localhost:3000/"
+from dotenv import load_dotenv
+load_dotenv()
 
-def get_pokemons():
-  r = requests.get(f'{BASE_URL}items/pokemons')
-  return r.json()
+BASE_URL = os.environ.get('BASE_URL')
 
 
-pokemons = get_pokemons()
+class Application:
+    def __init__(self, url):
+        self.url = url
+
+    def get_all(self):
+        r = requests.get(f'{self.url}/items/pokemons')
+        return r.json()
+
+
+application = Application(BASE_URL)
+print(str(application))
+
+pokemons = application.get_all()
 [print(pokemon) for pokemon in pokemons['data']]
-
