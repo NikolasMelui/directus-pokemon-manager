@@ -9,7 +9,8 @@ POKEAPI_URL = os.environ.get('POKEAPI_URL')
 DIRECTUS_URL = os.environ.get('DIRECTUS_URL')
 SECRET_TOKEN = os.environ.get('SECRET_TOKEN')
 
-LIMIT=10
+LIMIT = 10
+
 
 def get_pokemons():
     r = requests.get(f'{POKEAPI_URL}/pokemon?limit={LIMIT}')
