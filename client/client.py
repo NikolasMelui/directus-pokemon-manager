@@ -23,6 +23,7 @@ class Application:
         r = requests.get(f'{self.url}/custom/know-more/{name}')
         return r.json()
 
+
 application = Application(BASE_URL)
 
 pokemons = application.get_all()
@@ -33,4 +34,3 @@ pokemons = application.get_all()
 
 # info = application.know_more('magmar')
 # print(info)
-
