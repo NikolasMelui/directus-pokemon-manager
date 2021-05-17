@@ -12,7 +12,7 @@ SECRET_TOKEN = os.environ.get('SECRET_TOKEN')
 LIMIT=10
 
 def get_pokemons():
-    r = requests.get(f'{POKEAPI_URL}pokemon?limit={LIMIT}')
+    r = requests.get(f'{POKEAPI_URL}/pokemon?limit={LIMIT}')
     return r.json()
 
 
