@@ -26,7 +26,15 @@ Run the application:
   npx directus start
 ```
 
+#### Credentials
+
+- email: admin@example.com
+- password: 9XcqYED1_5Pj
+- secret_token: sUperSEcreTtoKEn6662
+
 There is a special custom endpoint `/custom/know-more/:name` which gets pockemon name fom the request, find it in the directus, go by the directus url to the `pokeAPI` for additional data about the pokemon and responde with it. Try it free now :D
+
+> There are 10 pokemons now in the directus, you can load more using the `loader` python application
 
 ---
 
